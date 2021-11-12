@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5c1ywwY0PfpRHUwOe13oZBtQz0jKKw5I1Tp4yO4cdD6+WL4SvnmJ7TwswnWp03tx6Cm02BQiPkA2bidi6FH1xw==",
+  "dgSpecHash": "WJHoW8vHWLtGTFzGBbcSaSbr9+CXPG1y0wifspm06M2GzhAEuDhuqmgyK8TT0uTNoMY0+3RvaEEKIC4Gf15Rdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\leonardo.migot\\source\\repos\\Teste\\Teste\\Teste.csproj",
   "expectedPackageFiles": [
@@ -97,11 +97,7 @@
     "C:\\Users\\leonardo.migot\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\leonardo.migot\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\leonardo.migot\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\leonardo.migot\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\leonardo.migot\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
-    "C:\\Users\\leonardo.migot\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\leonardo.migot\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\leonardo.migot\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\leonardo.migot\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

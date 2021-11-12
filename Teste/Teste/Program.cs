@@ -16,14 +16,13 @@ namespace Teste {
         private static void UpdateProduto()
         {
             
-            using (var repo = new LojaContext())
+            using (var repo = new ProdutoDAOEntity())
             {
-                Produto primeiro = repo.Produtos.First();
+                Produto primeiro = repo.GetAll().First();
 
                 primeiro.Nome = "novonome";
 
-                repo.Produtos.Update(primeiro);
-                repo.SaveChanges(); 
+                repo.Update(primeiro);
 
 
             }
@@ -32,22 +31,21 @@ namespace Teste {
 
         private static void DeletarProduto()
         {
-            using (var repo = new LojaContext())
+            using (var repo = new ProdutoDAOEntity())
             {
-                IList<Produto> produtos = repo.Produtos.ToList();
+                IList<Produto> produtos = repo.GetAll();
                 foreach (var item in produtos)
                 {
-                    repo.Produtos.Remove(item); 
+                    repo.Delete(item); 
                 }
-                repo.SaveChanges();
             }
         }
 
         private static void RecuperarProdutos()
         {
-            using (var repo = new LojaContext())
+            using (var repo = new ProdutoDAOEntity())
             {
-                IList<Produto> produtos = repo.Produtos.ToList();
+                IList<Produto> produtos = repo.GetAll();
                 foreach (var item in produtos)
                 {
                     Console.WriteLine(item.Nome);
@@ -62,9 +60,8 @@ namespace Teste {
             prod.Categoria = "cliented";
             prod.Preco = 738.98;
 
-            using(var contexto = new LojaContext()) {
-                contexto.Produtos.Add( prod );
-                contexto.SaveChanges();
+            using(var contexto = new ProdutoDAOEntity()) {
+                contexto.Create( prod );
             }
         }
     }
