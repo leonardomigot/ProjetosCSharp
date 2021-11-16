@@ -1,16 +1,49 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Teste {
     class Program {
         static void Main( string[] args ) {
-            //GravarDados();
-            //RecuperarProdutos();
-            //DeletarProduto();
-            RecuperarProdutos();
-            UpdateProduto();   
-            RecuperarProdutos();    
+
+
+            using (var contexto = new LojaContext())
+            {
+
+                var produtos = contexto.Produtos.ToList();
+
+                //var novoProd = new Produto()
+                //{
+                //    Nome = "jovem",
+                //    Categoria = "style",
+                //    Preco = 5
+                //};
+
+                var p1 = produtos.First();  
+
+                contexto.Produtos.Remove( p1 );
+
+                contexto.SaveChanges();
+
+
+
+                ShowEnt(contexto.ChangeTracker.Entries());
+
+                
+
+            }
+        }
+
+        private static void ShowEnt(IEnumerable<EntityEntry> entries)
+        {            
+            foreach (var e in entries)
+            {
+                Console.WriteLine(e.Entity.ToString() + e.State);
+            }
         }
 
         private static void UpdateProduto()
@@ -56,7 +89,7 @@ namespace Teste {
         private static void GravarDados() {
             Produto prod = new Produto();
 
-            prod.Nome = "jovemd";
+            prod.Nome = "segundo";
             prod.Categoria = "cliented";
             prod.Preco = 738.98;
 

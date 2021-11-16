@@ -8,5 +8,10 @@ namespace Teste {
         protected override void OnConfiguring( DbContextOptionsBuilder optionsBuilder ) {
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=LojaDB;Trusted_Connection=True;");
         }
+
+        internal object GetInfrastructure<T>()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
